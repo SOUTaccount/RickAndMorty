@@ -16,7 +16,7 @@ class NetworkModule {
         GsonBuilder().create()
 
     @Provides
-    fun provideRetrofit(okHttpClient: OkHttpClient, gson: Gson): Retrofit =
+    fun provideRetrofit(gson: Gson): Retrofit =
         Retrofit.Builder()
             .baseUrl("https://rickandmortyapi.com/api/")
             .addConverterFactory(GsonConverterFactory.create(gson))
