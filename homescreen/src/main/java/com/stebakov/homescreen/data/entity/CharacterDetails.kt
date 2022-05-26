@@ -1,6 +1,7 @@
 package com.stebakov.homescreen.data.entity
 
 import com.google.gson.annotations.SerializedName
+import com.stebakov.core.Abstract
 
 data class CharacterDetails(
     @SerializedName("id")
@@ -23,17 +24,4 @@ data class CharacterDetails(
     val image: String,
     @SerializedName("episode")
     val episode: List<String>
-) {
-//    fun toCharacterEntity() =
-//        CharacterEntity(
-//            id,
-//            name,
-//            status,
-//            species,
-//            type,
-//            gender,
-//            RegexUtil.extractIdFromUrl(origin.url),
-//            RegexUtil.extractIdFromUrl(location.url),
-//            image
-//        )
-}
+)
