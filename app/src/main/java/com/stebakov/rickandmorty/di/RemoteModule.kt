@@ -1,13 +1,11 @@
 package com.stebakov.rickandmorty.di
 
-import com.stebakov.homescreen.data.network.CharactersRepositoryImpl
-import com.stebakov.homescreen.data.network.CharactersService
-import com.stebakov.homescreen.domain.repository.CharactersRepository
-import dagger.Binds
+import com.stebakov.homescreen.data.cloud.CharactersCloudMapper
+import com.stebakov.homescreen.data.cloud.CharactersRepositoryImpl
+import com.stebakov.homescreen.data.cloud.CharactersService
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
-import javax.inject.Singleton
 
 @Module
 class RemoteModule {
@@ -18,6 +16,9 @@ class RemoteModule {
     }
 
     @Provides
-    fun provideCharactersRepositoryImpl(service: CharactersService) = CharactersRepositoryImpl(service)
+    fun provideCharactersRepositoryImpl(
+        service: CharactersService,
+        mapper: CharactersCloudMapper.Base
+    ) = CharactersRepositoryImpl(service, mapper)
 
 }

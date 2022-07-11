@@ -13,15 +13,6 @@ class HomeScreenFragment : BaseFragment(R.layout.fragment_home_screen) {
     @Inject
     lateinit var homeScreenViewModel: HomeScreenViewModel
 
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         homeScreenViewModel.fetchCharacters()

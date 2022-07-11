@@ -1,7 +1,7 @@
 package com.stebakov.homescreen.domain.repository
 
-import com.stebakov.homescreen.data.entity.Characters
+import com.stebakov.homescreen.data.ListCharactersDetailsData
 
 interface CharactersRepository {
-    suspend fun getCharacters(): Characters
+    suspend fun getCharacters(): ListCharactersDetailsData
 }

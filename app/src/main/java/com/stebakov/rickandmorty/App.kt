@@ -1,14 +1,14 @@
 package com.stebakov.rickandmorty
 
 import android.app.Application
-import com.stebakov.core.di.AppComponent
-import com.stebakov.core.di.DaggerAppComponent
-import javax.inject.Inject
+import com.stebakov.rickandmorty.di.AppComponent
+import com.stebakov.rickandmorty.di.CoreModule
+import com.stebakov.rickandmorty.di.DaggerAppComponent
 
 class App : Application() {
 
     companion object {
-        lateinit var appComponent: com.stebakov.core.di.AppComponent
+        lateinit var appComponent: AppComponent
     }
 
     override fun onCreate() {
@@ -19,6 +19,7 @@ class App : Application() {
     private fun initDagger() {
         appComponent = DaggerAppComponent.builder()
             .application(this)
+            .core(CoreModule(this))
             .build()
         appComponent.inject(this)
     }

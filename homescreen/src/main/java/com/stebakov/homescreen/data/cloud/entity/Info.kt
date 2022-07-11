@@ -1,4 +1,4 @@
-package com.stebakov.homescreen.data.entity
+package com.stebakov.homescreen.data.cloud.entity
 
 import com.google.gson.annotations.SerializedName
 

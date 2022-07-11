@@ -12,8 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class NetworkModule {
 
     @Provides
-    fun provideGson(): Gson =
-        GsonBuilder().create()
+    fun provideGson(): Gson = GsonBuilder().create()
 
     @Provides
     fun provideRetrofit(gson: Gson): Retrofit =

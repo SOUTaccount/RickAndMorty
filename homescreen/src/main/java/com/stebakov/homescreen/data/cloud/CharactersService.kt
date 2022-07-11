@@ -1,6 +1,6 @@
-package com.stebakov.homescreen.data.network
+package com.stebakov.homescreen.data.cloud
 
-import com.stebakov.homescreen.data.entity.Characters
+import com.stebakov.homescreen.data.cloud.entity.Characters
 import retrofit2.http.GET
 import retrofit2.http.Query
 

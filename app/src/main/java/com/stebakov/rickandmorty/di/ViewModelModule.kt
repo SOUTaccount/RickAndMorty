@@ -1,8 +1,9 @@
 package com.stebakov.rickandmorty.di
 
 import com.stebakov.homescreen.domain.usecases.GetCharactersUseCase
+import com.stebakov.homescreen.presentation.BaseListCharactersDomainToUiMapper
+import com.stebakov.homescreen.presentation.CharactersCommunication
 import com.stebakov.homescreen.presentation.HomeScreenViewModel
-import com.stebakov.homescreen.presentation.viewmodel.HomeScreenModel
 import dagger.Module
 import dagger.Provides
 
@@ -10,10 +11,10 @@ import dagger.Provides
 class ViewModelModule {
 
     @Provides
-    fun provideHomeScreenViewModel(homeScreenModel: HomeScreenModel.Base) =
-        HomeScreenViewModel(homeScreenModel = homeScreenModel)
+    fun provideHomeScreenViewModel(
+        communication: CharactersCommunication.Base,
+        mapper: BaseListCharactersDomainToUiMapper,
+        useCase: GetCharactersUseCase.Base
+    ) = HomeScreenViewModel(communication, mapper, useCase)
 
-    @Provides
-    fun provideHomeScreenModel(getCharactersUseCase: GetCharactersUseCase) =
-        HomeScreenModel.Base(getCharactersUseCase = getCharactersUseCase)
 }
