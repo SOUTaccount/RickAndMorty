@@ -8,7 +8,7 @@ import com.stebakov.homescreen.domain.ListCharactersDomainToUiMapper
 import javax.inject.Inject
 
 class BaseListCharactersDomainToUiMapper @Inject constructor(
-    resourceProvider: ResourceProvider,
+    private val resourceProvider: ResourceProvider,
     private val mapper: CharactersDetailsDomainToUiMapper
 ) : ListCharactersDomainToUiMapper(resourceProvider) {
     override fun map(errorType: ErrorType) =

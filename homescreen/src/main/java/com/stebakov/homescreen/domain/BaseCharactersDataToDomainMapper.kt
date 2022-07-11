@@ -1,8 +1,9 @@
 package com.stebakov.homescreen.domain
 
 import com.stebakov.homescreen.data.CharactersDataToDomainMapper
+import javax.inject.Inject
 
-class BaseCharactersDataToDomainMapper : CharactersDataToDomainMapper {
+class BaseCharactersDataToDomainMapper @Inject constructor() : CharactersDataToDomainMapper {
     override fun map(
         id: Int,
         name: String,
