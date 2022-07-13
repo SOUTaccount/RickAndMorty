@@ -1,9 +1,11 @@
-package com.stebakov.homescreen.presentation
+package com.stebakov.homescreen.presentation.mappers
 
-import com.stebakov.homescreen.domain.CharactersDetailsDomainToUiMapper
+import com.stebakov.homescreen.domain.mappers.CharactersDetailsDomainToUiMapper
+import com.stebakov.homescreen.presentation.model.CharactersDetailsUi
 import javax.inject.Inject
 
-class BaseCharactersDetailsDomainToUiMapper @Inject constructor() : CharactersDetailsDomainToUiMapper {
+class BaseCharactersDetailsDomainToUiMapper @Inject constructor() :
+    CharactersDetailsDomainToUiMapper {
     override fun map(
         id: Int,
         name: String,

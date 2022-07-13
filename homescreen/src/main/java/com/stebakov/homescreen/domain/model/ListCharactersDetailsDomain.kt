@@ -1,8 +1,9 @@
-package com.stebakov.homescreen.domain
+package com.stebakov.homescreen.domain.model
 
 import com.stebakov.core.Abstract
 import com.stebakov.core.ErrorType
-import com.stebakov.homescreen.presentation.ListCharactersDetailsUi
+import com.stebakov.homescreen.domain.mappers.ListCharactersDomainToUiMapper
+import com.stebakov.homescreen.presentation.model.ListCharactersDetailsUi
 
 sealed class ListCharactersDetailsDomain :
     Abstract.Object<ListCharactersDetailsUi, ListCharactersDomainToUiMapper> {

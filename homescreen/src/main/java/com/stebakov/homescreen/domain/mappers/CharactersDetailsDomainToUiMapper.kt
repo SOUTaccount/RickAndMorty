@@ -1,7 +1,7 @@
-package com.stebakov.homescreen.domain
+package com.stebakov.homescreen.domain.mappers
 
 import com.stebakov.core.Abstract
-import com.stebakov.homescreen.presentation.CharactersDetailsUi
+import com.stebakov.homescreen.presentation.model.CharactersDetailsUi
 
 interface CharactersDetailsDomainToUiMapper : Abstract.Mapper {
     fun map(

@@ -1,10 +1,12 @@
-package com.stebakov.homescreen.presentation
+package com.stebakov.homescreen.presentation.mappers
 
 import com.stebakov.core.ErrorType
 import com.stebakov.core.ResourceProvider
-import com.stebakov.homescreen.domain.CharactersDetailsDomain
-import com.stebakov.homescreen.domain.CharactersDetailsDomainToUiMapper
-import com.stebakov.homescreen.domain.ListCharactersDomainToUiMapper
+import com.stebakov.homescreen.domain.model.CharactersDetailsDomain
+import com.stebakov.homescreen.domain.mappers.CharactersDetailsDomainToUiMapper
+import com.stebakov.homescreen.domain.mappers.ListCharactersDomainToUiMapper
+import com.stebakov.homescreen.presentation.model.CharactersDetailsUi
+import com.stebakov.homescreen.presentation.model.ListCharactersDetailsUi
 import javax.inject.Inject
 
 class BaseListCharactersDomainToUiMapper @Inject constructor(

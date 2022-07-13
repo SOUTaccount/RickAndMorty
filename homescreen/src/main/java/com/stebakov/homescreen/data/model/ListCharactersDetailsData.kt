@@ -1,7 +1,8 @@
-package com.stebakov.homescreen.data
+package com.stebakov.homescreen.data.model
 
 import com.stebakov.core.Abstract
-import com.stebakov.homescreen.domain.ListCharactersDetailsDomain
+import com.stebakov.homescreen.data.mappers.ListCharactersDataToDomainMapper
+import com.stebakov.homescreen.domain.model.ListCharactersDetailsDomain
 import java.lang.Exception
 
 sealed class ListCharactersDetailsData :

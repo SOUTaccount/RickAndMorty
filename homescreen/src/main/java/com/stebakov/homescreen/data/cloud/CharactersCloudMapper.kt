@@ -1,8 +1,8 @@
 package com.stebakov.homescreen.data.cloud
 
 import com.stebakov.core.Abstract
-import com.stebakov.homescreen.data.CharactersDetailsData
-import com.stebakov.homescreen.data.ToCharactersDetailsMapper
+import com.stebakov.homescreen.data.model.CharactersDetailsData
+import com.stebakov.homescreen.data.mappers.ToCharactersDetailsMapper
 import com.stebakov.homescreen.data.cloud.entity.CharacterDetailsCloud
 import javax.inject.Inject
 

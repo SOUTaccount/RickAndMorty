@@ -1,6 +1,7 @@
-package com.stebakov.homescreen.domain
+package com.stebakov.homescreen.domain.mappers
 
-import com.stebakov.homescreen.data.CharactersDataToDomainMapper
+import com.stebakov.homescreen.data.mappers.CharactersDataToDomainMapper
+import com.stebakov.homescreen.domain.model.CharactersDetailsDomain
 import javax.inject.Inject
 
 class BaseCharactersDataToDomainMapper @Inject constructor() : CharactersDataToDomainMapper {

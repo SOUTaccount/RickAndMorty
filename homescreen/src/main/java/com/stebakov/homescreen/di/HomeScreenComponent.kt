@@ -9,7 +9,8 @@ import dagger.Component
     modules = [
         HomeScreenModule::class,
         HomeScreenRemoteModule::class,
-        HomeScreenCoreModule::class
+        HomeScreenCoreModule::class,
+        HomeScreenMapperModule::class
     ], dependencies = [CoreComponent::class]
 )
 interface HomeScreenComponent {

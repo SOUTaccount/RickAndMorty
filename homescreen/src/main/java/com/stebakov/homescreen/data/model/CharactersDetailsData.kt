@@ -1,7 +1,8 @@
-package com.stebakov.homescreen.data
+package com.stebakov.homescreen.data.model
 
 import com.stebakov.core.Abstract
-import com.stebakov.homescreen.domain.CharactersDetailsDomain
+import com.stebakov.homescreen.data.mappers.CharactersDataToDomainMapper
+import com.stebakov.homescreen.domain.model.CharactersDetailsDomain
 
 
 data class CharactersDetailsData(

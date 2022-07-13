@@ -1,6 +1,6 @@
 package com.stebakov.homescreen.di
 
-import com.stebakov.homescreen.data.cloud.CharactersService
+import com.stebakov.homescreen.data.cloud.service.CharactersService
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
