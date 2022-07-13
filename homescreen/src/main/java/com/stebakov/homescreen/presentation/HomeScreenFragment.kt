@@ -21,5 +21,4 @@ class HomeScreenFragment : BaseFragment(R.layout.fragment_home_screen) {
         super.onViewCreated(view, savedInstanceState)
         homeScreenViewModel.fetchCharacters()
     }
-
 }

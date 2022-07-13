@@ -4,10 +4,9 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import androidx.lifecycle.viewModelScope
 import com.stebakov.core.base.BaseViewModel
-import com.stebakov.homescreen.domain.CharactersDetailsDomainToUiMapper
-import com.stebakov.homescreen.domain.ListCharactersDomainToUiMapper
+import com.stebakov.homescreen.domain.mappers.ListCharactersDomainToUiMapper
 import com.stebakov.homescreen.domain.usecases.GetCharactersUseCase
-import kotlinx.coroutines.CoroutineScope
+import com.stebakov.homescreen.presentation.model.CharactersDetailsUi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

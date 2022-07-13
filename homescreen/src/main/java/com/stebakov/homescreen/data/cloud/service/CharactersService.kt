@@ -1,4 +1,4 @@
-package com.stebakov.homescreen.data.cloud
+package com.stebakov.homescreen.data.cloud.service
 
 import com.stebakov.homescreen.data.cloud.entity.Characters
 import retrofit2.http.GET
@@ -14,4 +14,6 @@ interface CharactersService {
         @Query("species") species: String? = null,
         @Query("gender") gender: String? = null
     ): Characters
+
+    //TODO add pagination
 }

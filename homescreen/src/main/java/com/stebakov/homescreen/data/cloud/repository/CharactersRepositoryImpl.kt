@@ -1,6 +1,8 @@
-package com.stebakov.homescreen.data.cloud
+package com.stebakov.homescreen.data.cloud.repository
 
-import com.stebakov.homescreen.data.ListCharactersDetailsData
+import com.stebakov.homescreen.data.model.ListCharactersDetailsData
+import com.stebakov.homescreen.data.cloud.CharactersCloudMapper
+import com.stebakov.homescreen.data.cloud.service.CharactersService
 import com.stebakov.homescreen.domain.repository.CharactersRepository
 import java.lang.Exception
 import javax.inject.Inject

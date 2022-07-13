@@ -1,8 +1,7 @@
 package com.stebakov.homescreen.domain.usecases
 
-import com.stebakov.homescreen.data.ListCharactersDataToDomainMapper
-import com.stebakov.homescreen.data.cloud.CharactersRepositoryImpl
-import com.stebakov.homescreen.domain.ListCharactersDetailsDomain
+import com.stebakov.homescreen.data.mappers.ListCharactersDataToDomainMapper
+import com.stebakov.homescreen.domain.model.ListCharactersDetailsDomain
 import com.stebakov.homescreen.domain.repository.CharactersRepository
 import javax.inject.Inject
 

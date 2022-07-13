@@ -1,7 +1,8 @@
-package com.stebakov.homescreen.domain
+package com.stebakov.homescreen.domain.model
 
 import com.stebakov.core.Abstract
-import com.stebakov.homescreen.presentation.CharactersDetailsUi
+import com.stebakov.homescreen.domain.mappers.CharactersDetailsDomainToUiMapper
+import com.stebakov.homescreen.presentation.model.CharactersDetailsUi
 
 data class CharactersDetailsDomain(
     private val id: Int,

@@ -2,8 +2,8 @@ package com.stebakov.homescreen.data.cloud.entity
 
 import com.google.gson.annotations.SerializedName
 import com.stebakov.core.Abstract
-import com.stebakov.homescreen.data.CharactersDetailsData
-import com.stebakov.homescreen.data.ToCharactersDetailsMapper
+import com.stebakov.homescreen.data.model.CharactersDetailsData
+import com.stebakov.homescreen.data.mappers.ToCharactersDetailsMapper
 
 data class CharacterDetailsCloud(
     @SerializedName("id")

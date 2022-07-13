@@ -2,10 +2,18 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeScreenFragment">
+    app:startDestination="@id/splashFragment">
 
     <fragment
-        android:id="@+id/homeScreenFragment"
-        android:name="com.stebakov.homescreen.presentation.HomeScreenFragment"
-        android:label="HomeScreenFragment" />
+        android:id="@+id/splashFragment"
+        android:name="com.stebakov.rickandmorty.presentation.SplashFragment"
+        android:label="SplashFragment">
+        <action
+            android:id="@+id/action_splashFragment_to_CharactersNavGraph"
+            app:destination="@+id/nav_graph_characters"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <include app:graph="@navigation/nav_graph_characters" />
 </navigation>

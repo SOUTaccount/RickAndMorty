@@ -1,4 +1,4 @@
-package com.stebakov.homescreen.presentation
+package com.stebakov.homescreen.presentation.model
 
 sealed class CharactersDetailsUi {
     data class Base(

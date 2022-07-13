@@ -1,7 +1,8 @@
-package com.stebakov.rickandmorty
+package com.stebakov.rickandmorty.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.stebakov.rickandmorty.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

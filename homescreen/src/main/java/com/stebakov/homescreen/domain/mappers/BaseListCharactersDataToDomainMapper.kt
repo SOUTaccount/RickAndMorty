@@ -1,8 +1,9 @@
-package com.stebakov.homescreen.domain
+package com.stebakov.homescreen.domain.mappers
 
-import com.stebakov.homescreen.data.CharactersDataToDomainMapper
-import com.stebakov.homescreen.data.CharactersDetailsData
-import com.stebakov.homescreen.data.ListCharactersDataToDomainMapper
+import com.stebakov.homescreen.data.mappers.CharactersDataToDomainMapper
+import com.stebakov.homescreen.data.model.CharactersDetailsData
+import com.stebakov.homescreen.data.mappers.ListCharactersDataToDomainMapper
+import com.stebakov.homescreen.domain.model.ListCharactersDetailsDomain
 import java.lang.Exception
 import javax.inject.Inject
 
