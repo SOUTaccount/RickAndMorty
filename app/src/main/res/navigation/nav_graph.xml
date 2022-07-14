@@ -9,11 +9,13 @@
         android:name="com.stebakov.rickandmorty.presentation.SplashFragment"
         android:label="SplashFragment">
         <action
-            android:id="@+id/action_splashFragment_to_CharactersNavGraph"
-            app:destination="@+id/nav_graph_characters"
-            app:popUpTo="@id/nav_graph"
-            app:popUpToInclusive="true" />
+            android:id="@+id/action_splashFragment_to_MainFragment"
+            app:destination="@+id/mainFragment" />
     </fragment>
 
-    <include app:graph="@navigation/nav_graph_characters" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.stebakov.rickandmorty.presentation.MainFragment"
+        android:label="MainFragment" />
+
 </navigation>

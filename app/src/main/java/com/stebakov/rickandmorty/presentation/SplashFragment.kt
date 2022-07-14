@@ -28,7 +28,7 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
         Glide.with(this).load(R.drawable.rick).into(binding.ivSplash)
         CoroutineScope(Dispatchers.Main).launch {
             delay(SPLASH_DURATION)
-            findNavController().navigate(R.id.action_splashFragment_to_CharactersNavGraph)
+            findNavController().navigate(R.id.action_splashFragment_to_MainFragment)
         }
     }
 }
