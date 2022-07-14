@@ -1,4 +1,4 @@
-package com.stebakov.homescreen.presentation
+package com.stebakov.homescreen.presentation.characters
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.stebakov.core.base.BaseViewModel
 import com.stebakov.homescreen.domain.mappers.ListCharactersDomainToUiMapper
 import com.stebakov.homescreen.domain.usecases.GetCharactersUseCase
+import com.stebakov.homescreen.presentation.CharactersCommunication
 import com.stebakov.homescreen.presentation.model.CharactersDetailsUi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -19,7 +20,7 @@ class HomeScreenViewModel @Inject constructor(
 ) : BaseViewModel() {
 
     fun fetchCharacters() {
-        communication.map(listOf(CharactersDetailsUi.Progress))
+//        communication.map(listOf(CharactersDetailsUi.Progress))
         viewModelScope.launch(Dispatchers.IO){
             val resultDomain = charactersUseCase.getCharacters()
             val resultUi = resultDomain.map(mapper = mapper)

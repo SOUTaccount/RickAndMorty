@@ -1,7 +1,7 @@
 package com.stebakov.homescreen.di
 
 import com.stebakov.core.di.CoreComponent
-import com.stebakov.homescreen.presentation.HomeScreenFragment
+import com.stebakov.homescreen.presentation.characters.HomeScreenFragment
 import dagger.Component
 
 @HomeScreenScope
