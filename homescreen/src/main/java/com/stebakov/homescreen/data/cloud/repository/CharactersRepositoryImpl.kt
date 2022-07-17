@@ -11,8 +11,14 @@ class CharactersRepositoryImpl @Inject constructor(
     private val charactersService: CharactersService,
     private val cloudMapper: CharactersCloudMapper
 ) : CharactersRepository {
-    override suspend fun getCharacters() = try {
-        val characters = charactersService.getCharacterPage()
+    override suspend fun getCharacters(
+        page: Int?,
+        name: String?,
+        status: String?,
+        species: String?,
+        gender: String?
+    ) = try {
+        val characters = charactersService.getCharacterPage(page, name, status, species, gender)
         val characterDetails = characters.map(cloudMapper)
         ListCharactersDetailsData.Success(characterDetails)
     } catch (e: Exception) {

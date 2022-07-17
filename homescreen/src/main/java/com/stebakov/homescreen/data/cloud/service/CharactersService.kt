@@ -14,6 +14,4 @@ interface CharactersService {
         @Query("species") species: String? = null,
         @Query("gender") gender: String? = null
     ): Characters
-
-    //TODO add pagination
 }

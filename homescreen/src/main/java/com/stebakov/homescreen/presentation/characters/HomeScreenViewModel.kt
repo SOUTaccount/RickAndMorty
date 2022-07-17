@@ -19,18 +19,37 @@ class HomeScreenViewModel @Inject constructor(
     private val charactersUseCase: GetCharactersUseCase
 ) : BaseViewModel() {
 
-    fun fetchCharacters() {
-//        communication.map(listOf(CharactersDetailsUi.Progress))
-        viewModelScope.launch(Dispatchers.IO){
-            val resultDomain = charactersUseCase.getCharacters()
+    private var currentPage = 1
+
+    fun fetchCharacters(
+        page: Int? = null,
+        name: String? = null,
+        status: String? = null,
+        species: String? = null,
+        gender: String? = null
+    ) {
+        communication.map(listOf(CharactersDetailsUi.Progress))
+        viewModelScope.launch(Dispatchers.IO) {
+            val resultDomain = charactersUseCase.getCharacters(page, name, status, species, gender)
             val resultUi = resultDomain.map(mapper = mapper)
-            withContext(Dispatchers.Main){
+            withContext(Dispatchers.Main) {
                 resultUi.map(communication)
             }
         }
     }
 
-    fun observe(owner: LifecycleOwner, observer: Observer<List<CharactersDetailsUi>>){
+    fun fetchNextPage() {
+        currentPage++
+        viewModelScope.launch(Dispatchers.IO) {
+            val resultDomain = charactersUseCase.getCharacters(page = currentPage)
+            val resultUi = resultDomain.map(mapper = mapper)
+            withContext(Dispatchers.Main) {
+                resultUi.mapNewData(communication)
+            }
+        }
+    }
+
+    fun observe(owner: LifecycleOwner, observer: Observer<List<CharactersDetailsUi>>) {
         communication.observe(owner, observer)
     }
 }
