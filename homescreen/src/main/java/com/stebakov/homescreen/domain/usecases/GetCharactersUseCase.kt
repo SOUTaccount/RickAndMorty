@@ -6,12 +6,24 @@ import com.stebakov.homescreen.domain.repository.CharactersRepository
 import javax.inject.Inject
 
 interface GetCharactersUseCase {
-    suspend fun getCharacters(): ListCharactersDetailsDomain
+    suspend fun getCharacters(
+        page: Int? = null,
+        name: String? = null,
+        status: String? = null,
+        species: String? = null,
+        gender: String? = null
+    ): ListCharactersDetailsDomain
 
     class Base @Inject constructor(
         private val repository: CharactersRepository,
         private val mapper: ListCharactersDataToDomainMapper
     ) : GetCharactersUseCase {
-        override suspend fun getCharacters() = repository.getCharacters().map(mapper = mapper)
+        override suspend fun getCharacters(
+            page: Int?,
+            name: String?,
+            status: String?,
+            species: String?,
+            gender: String?
+        ) = repository.getCharacters(page, name, status, species, gender).map(mapper = mapper)
     }
 }

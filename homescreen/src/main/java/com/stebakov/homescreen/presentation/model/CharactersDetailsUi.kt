@@ -29,6 +29,8 @@ sealed class CharactersDetailsUi : Comparing<CharactersDetailsUi> {
 
         override fun sameContent(item: CharactersDetailsUi) =
             if (item is Fail) message == item.message else false
+
+        fun message() = message
     }
 
     object Progress : CharactersDetailsUi()

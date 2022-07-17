@@ -5,13 +5,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewbinding.ViewBinding
 import com.stebakov.core.Comparing
 import com.stebakov.core.DiffUtilCallback
 
 /**
  * Created by Vladimir Stebakov on 13.07.2022
  */
-abstract class BaseAdapter<E : Comparing<E>, T : BaseViewHolder<E>> : RecyclerView.Adapter<T>() {
+abstract class BaseAdapter<E : Comparing<E>, T : BaseViewHolder<E>>() :
+    RecyclerView.Adapter<T>() {
 
     protected val list = ArrayList<E>()
 
@@ -34,9 +36,5 @@ abstract class BaseAdapter<E : Comparing<E>, T : BaseViewHolder<E>> : RecyclerVi
 abstract class BaseViewHolder<E>(view: View) : RecyclerView.ViewHolder(view) {
     open fun bind(item: E) {}
 
-    class FullscreenProgress<E>(view: View) : BaseViewHolder<E>(view)
-
-    class Fail<E>(view: View) : BaseViewHolder<E>(view) {
-        override fun bind(item: E) {}
-    }
+    class Progress<E>(view: ViewBinding) : BaseViewHolder<E>(view.root)
 }
