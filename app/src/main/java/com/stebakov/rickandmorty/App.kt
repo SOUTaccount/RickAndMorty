@@ -1,6 +1,7 @@
 package com.stebakov.rickandmorty
 
 import android.app.Application
+import android.util.Log
 import com.stebakov.core.di.CoreComponent
 import com.stebakov.core.di.CoreModule
 import com.stebakov.core.di.CoreProvider
@@ -39,6 +40,7 @@ class App : Application(), CoreProvider, HomeScreenProvider {
             .coreComponent(coreComponent)
             .build()
         appComponent.inject(this)
+        Log.d("TAG","APP INIT")
     }
 
     override fun provideCoreComponent(): CoreComponent = coreComponent
